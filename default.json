@@ -21,12 +21,21 @@
     {
       "depTypeList": ["dependencies", "peerDependencies"],
       "semanticCommitType": "fix"
+      "matchJsonata": "$exists(isLockfileUpdate) = false"
     },
     {
       "depTypeList": ["action"],
       "semanticCommitType": "ci",
       "semanticCommitScope": "action"
+    },
+    {
+      "groupName": "express",
+      "matchPackageNames": [
+        "@types/express",
+        "express",
+      ]
     }
+  ]
   ],
   "postUpdateOptions": ["npmDedupe"]
 }
